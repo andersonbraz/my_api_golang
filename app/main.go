@@ -19,7 +19,7 @@ func getRoot(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	// we created Info array
-	intro := []string{"Golang", "Example API"}
+	intro := []string{"API Golang", "/api/info", "/api/check"}
 	json.NewEncoder(w).Encode(intro) // encode similar to serialize process.
 
 }
