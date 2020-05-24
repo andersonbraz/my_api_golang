@@ -24,6 +24,11 @@ services:
     container_name: mongo-client
     ports:
       - 8030:8030
+    environment:
+      - MONGODB_DATABASE=mongodb://mongodb-server:27017
+      - MONGODB_SOURCE=dbinfo
+      - MONGODB_USER=appuser
+      - MONGODB_PASS=Mko0Zaq1
     networks:
       - mongo_net
     depends_on:
