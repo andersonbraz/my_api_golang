@@ -1,4 +1,0 @@
-database: 'mongodb://mongodb-server:27017'
-source: 'dbinfo'
-user: 'appuser'
-password: 'Mko0Zaq1'
