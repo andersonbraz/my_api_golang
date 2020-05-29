@@ -19,6 +19,5 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cleacgo -ldflags '-extld
 FROM scratch
 EXPOSE 8030 
 WORKDIR /app/
-RUN ./agent check
 COPY --from=builder /build/app/main .
 CMD ["./main"]

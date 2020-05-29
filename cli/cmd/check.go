@@ -21,11 +21,6 @@ This command check enviroment variables for your MongoDB service.
 	},
 }
 
-// MONGODB_ADDRESS: << driver://hostname:port >>
-// MONGODB_DATABASE: << database >>
-// MONGODB_USER: << username >>
-// MONGODB_PASSWORD: << password >>
-
 func checkMongoDB() {
 
 	for _, e := range viper.AllKeys() {
@@ -51,15 +46,5 @@ func init() {
 
 	checkCmd.Flags().BoolP("mongodb", "m", true, "Check enviroment variables for MongoDB")
 	rootCmd.AddCommand(checkCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	//checkCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	//checkCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 }
